@@ -1,0 +1,31 @@
+img {
+    height: 150px;
+    widht: 20px;
+
+}
+@media screen and(min-widht:900px){
+    
+}
+
+main{
+    flex-box;
+}
+
+navbar{
+.
+
+.cabe {
+    
+    width: 230px;
+    height: 390px;
+    box-shadow: 0 0 20px #aaa;
+    margin: 25px;
+    padding: 10px 10px 0 10px;
+    vertical-align: top;
+    transition: height 1s;
+}
+
+.bookright {
+    right: 0;
+    position: absolute;
+}
