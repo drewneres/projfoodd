@@ -7,6 +7,7 @@
             <li class="nav-link"><a  href="?secao=manutecomida"">MANTER COMIDA</a></li>
             <li class="nav-link"><a href="?secao=cadastrarestaurante"">CADASTRO DE RESTAURANTE</a></li>
             <li class="nav-link"><a href="?secao=manuterest">MANTER RESTAURANTE</a></li>
+            <li class="nav-link"><a href="?secao=listarusuarios">LISTAR USUÁRIOS</a></li>
             <li class="nav-link"><a href="index.php">LOGOUT</a></li>
     </div>
         </div>
