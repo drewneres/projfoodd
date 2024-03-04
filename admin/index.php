@@ -19,10 +19,10 @@
           <div class="card-body p-5 text-center">
 
             <h3 class="mb-5">Sign in</h3>
-
+            <form method="post" action="login.php">
             <div class="form-outline mb-4">
-              <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
-              <label class="form-label" for="typeEmailX-2">Email</label>
+              <input type="text" id="typeEmailX-2" class="form-control form-control-lg" name="txtNome" />
+              <label class="form-label" for="typeEmailX-2">Nome</label>
             </div>
 
             <div class="form-outline mb-4">
@@ -36,8 +36,8 @@
               <label class="form-check-label" for="form1Example3"> Remember password </label>
             </div>
 
-            <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
-
+            <input class="btn btn-primary btn-lg btn-block" type="submit" value="Enviar">
+            </form>
           </div>
         </div>
       </div>

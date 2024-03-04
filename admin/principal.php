@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
+
+    
     <meta charset='utf-8'/>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
     <title>My Food</title>
@@ -9,6 +11,12 @@
     <link rel='stylesheet' href='css/estilo.css'/>
 </head>
 <body>
+
+        <?php
+        session_start();
+        $qualquer = $_SESSION['usuario'];
+        echo'<h1>Bem vindo'.$qualquer.'</h1>';
+        ?>
         <?php include("includes/cabecalho.php");?>
         <?php include("includes/menu.php");?>
         <main>
