@@ -15,7 +15,7 @@
         <?php
         session_start();
         $qualquer = $_SESSION['usuario'];
-        echo'<h1>Bem vindo'.$qualquer.'</h1>';
+        echo'<h1>Bem vindo '.$qualquer.'</h1>';
         ?>
         <?php include("includes/cabecalho.php");?>
         <?php include("includes/menu.php");?>
