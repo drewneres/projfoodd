@@ -19,7 +19,7 @@
           <div class="card-body p-5 text-center">
 
             <h3 class="mb-5">Sign in</h3>
-            <form method="post" action="login.php">
+            <form id="formzada" method="post" action="login.php">
             <div class="form-outline mb-4">
               <input type="text" id="typeEmailX-2" class="form-control form-control-lg" name="txtNome" />
               <label class="form-label" for="typeEmailX-2">Nome</label>
