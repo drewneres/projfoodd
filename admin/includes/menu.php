@@ -1,5 +1,4 @@
-
-<ul class="navbar navbar-dark bg-dark nav-pills nav-fill id='navmen' ">
+<!-- <ul class="navbar navbar-dark bg-dark nav-pills nav-fill id='navmen' ">
             <li class="nav-item"><a class="nav-link text-white" href="?secao=cadcomid">COMIDA CADASTRO</a></li>
             <li class="nav-item"><a class="nav-link text-white"  href="?secao=manutecomida"">MANTER COMIDA</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="?secao=cadastrarestaurante"">CADASTRO DE RESTAURANTE</a></li>
@@ -10,4 +9,6 @@
             <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
             </form>
 
-</ul>
+</ul>   -->
+
+
