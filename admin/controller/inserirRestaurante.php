@@ -25,4 +25,7 @@ $inserir->setTable('tb_restaurante');
 $inserir->setFields("nome, descricao, categoria, url");
 $inserir->setDados("'{$restaurante->getNome()}', '{$restaurante->getDescricao()}' ,'{$restaurante->getCategoria()}', '{$restaurante->getUrl()}'");
 $inserir->insert();
+
+echo "<script>alert('Restaurante cadastrado com sucesso!')</script>";
+echo "<script>location='../../admin/principal.php'</script>";
 ?>
