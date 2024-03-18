@@ -21,7 +21,7 @@
 
     }
     protected function execSQL($sql){   
-        $this->qr = @mysqli_query($this->conn, $sql) or die("<ins><center>Erro ao encontrar a query: $sql - </center></ins><br/>" .mysqli_error($this->conn));
+        $this->qr = @mysqli_query($this->conn, $sql) or die("<ins><center>Erro ao encontrar a query: $sql - </center></ins><br/>".mysqli_error($this->conn));
         return $this->qr;
     }
     protected function listQr($qr){
