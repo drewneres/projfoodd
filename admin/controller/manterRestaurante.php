@@ -18,6 +18,7 @@
             echo "<script> location = '../principal.php' </script>";
             break;
         case "editar";
+            
             break;
         default;
             break;
