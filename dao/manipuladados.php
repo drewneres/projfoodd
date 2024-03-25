@@ -75,6 +75,7 @@
         public function update()
         {
             $this->sql = "UPDATE $this->table SET $this->fields WHERE $this->fieldPK = '$this->valuePK'";
+            echo $this->sql;
             if (self::execSQL($this->sql)){
                 $this->status = "Cadastrado com sucesso";
             } else{

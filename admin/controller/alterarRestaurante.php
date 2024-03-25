@@ -1,7 +1,6 @@
 <?php
 include_once("../../dao/manipuladados.php");
 include_once("../../model/restaurante.php");
-
 function converte($String){
     return iconv("UTF-8", "ISO8859-1",$String);
 }
@@ -21,13 +20,12 @@ $nomearquivosalvo = converte ($_FILES['arquivo']['name']);
 $urllocalsalvo = "../../img/restaurantes/".$nomearquivosalvo;
 move_uploaded_file($_FILES['arquivo']['tmp_name'], $urllocalsalvo);
 
-
 $alterar->setTable('tb_restaurante');
-$alterar->setFields("nome='{$restaurante->getNome()}', descricao='{$restaurante->getDescricao()}',categoria='{$restaurante->getCategoria()},url='{$restaurante->getUrl()}'");
+$alterar->setFields("nome='{$restaurante->getNome()}', descricao='{$restaurante->getDescricao()}',categoria='{$restaurante->getCategoria()}',url='{$restaurante->getUrl()}'");
 
 
 $alterar->setFieldPK("id");
-$alterar->setValuePK("'{$restaurante->getId()}'");
+$alterar->setValuePK("{$restaurante->getId()}");
 $alterar->update();
 
 echo "<script>alert('".$alterar->getStatus()."')</script>";

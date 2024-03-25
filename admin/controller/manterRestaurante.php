@@ -22,7 +22,7 @@
             echo "<script> location = '../principal.php' </script>";
             break;
         case "editar";
-        echo '<form method="post" action="controller/alterarRestaurante.php" enctype="multipart/form-data">
+        echo '<form method="post" action="alterarRestaurante.php" enctype="multipart/form-data">
         <input type="hidden" name="txtId" value="'.$id.'"/>
 
         <p>
