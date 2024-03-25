@@ -55,6 +55,16 @@
             return $linhas;
         }
 
+        public function insert()
+        {
+            $this->sql = "INSERT INTO $this->table($this->fields) VALUES ($this->valuePK)";
+            if (self::execSQL($this->sql)){
+                $this->status = "Cadastrado com sucesso";
+            } else{
+                $this->status = "Erro ao cadastrar" . mysqli_error($this->connect());
+            }
+        }
+
         public function update()
         {
             $this->sql = "UPDATE $this->table SET $this->fields WHERE this->fieldPK = '$this->valuePK";
@@ -67,7 +77,7 @@
 
         public function delete()
         {
-            $this->sql = "DELETE FROM $this->table WHERE this->fieldPK = '$this->valuePK";
+            $this->sql = "DELETE FROM $this->table WHERE $this->fieldPK = '$this->valuePK'";
             if (self::execSQL($this->sql)){
                 $this->status = "DELETADO com sucesso";
             } else{
