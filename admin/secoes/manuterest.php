@@ -6,7 +6,6 @@ include_once("../dao/manipuladados.php");
     $lista = $dados->getAllDataTable();
 ?>
 <section>
-  <form method="post" action="controller/manterRestaurante.php"
           <table border="1">
             <tr>
               <th>ID</th>
@@ -22,6 +21,7 @@ include_once("../dao/manipuladados.php");
 
     foreach ($lista as $restaurante) {
         ?>
+        <form method="post" action="controller/manterRestaurante.php">
         <tr>
           <td><?= $restaurante["id"] ?></td>
           <td><?= $restaurante["nome"] ?></td>
@@ -38,6 +38,7 @@ include_once("../dao/manipuladados.php");
           <td><button type="submit" name="botao" value="editar">imagem para editar </button></td>
           <td><button type="submit" name="botao" value="excluir"> imagem para excluir</button></td>
         </tr>
+        </form>
         <?php
     }
     ?>
