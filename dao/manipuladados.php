@@ -56,18 +56,25 @@
         }
 
         public function insert()
-        {
-            $this->sql = "INSERT INTO $this->table($this->fields) VALUES ($this->valuePK)";
-            if (self::execSQL($this->sql)){
-                $this->status = "Cadastrado com sucesso";
-            } else{
-                $this->status = "Erro ao cadastrar" . mysqli_error($this->connect());
+            {
+                $this->sql = "INSERT INTO $this->table ($this->fields) VALUES ($this->dados)";
+                if(self::execSQL($this->sql))
+                {
+                    $this->status = "Cadastrado com Sucesso";
+                }
+                else
+                {
+                    $this->status = "Erro ao Cadastrar".mysqli_error($this->connect());
+                }
+                
             }
-        }
+            public function getStatus(){
+                return $this->status;
+            }
 
         public function update()
         {
-            $this->sql = "UPDATE $this->table SET $this->fields WHERE this->fieldPK = '$this->valuePK";
+            $this->sql = "UPDATE $this->table SET $this->fields WHERE $this->fieldPK = '$this->valuePK'";
             if (self::execSQL($this->sql)){
                 $this->status = "Cadastrado com sucesso";
             } else{
