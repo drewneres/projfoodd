@@ -1,15 +1,23 @@
-
-<nav class="navbar navbar-dark bg-dark flex-column col-2">
-    <div class= "row">
-        <div class="navbar-nav" id="navmen">
-
-            <li class="nav-link"><a href="?secao=home">HOME</a></li>
-            <li class="nav-link"><a  href="?secao=restaurantes"">RESTAURANTES PARCEIROS</a></li>
-            <li class="nav-link"><a href="?secao=cardapio"">CARDAPIO</a></li>
-            <li class="nav-link"><a href="?secao=contato">CONTATOS</a></li>
-            <li class="nav-link"><a href="admin/index.php">ÁREA ADMINISTRATIVA</a></li>
-    </div>
-        </div>
-
-     
-</nav>
+<ul class="navbar navbar-dark bg-dark nav-pills d-flex justify-content-around">
+    <li class="nav-item">
+        <img src="img/site/drewzin.png">
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="?secao=home">HOME</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="?secao=restaurantes">RESTAURANTES PARCEIROS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="?secao=cardapio">CARDAPIO</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="?secao=contato">CONTATOS</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-white" href="admin/index.php">ÁREA ADMINISTRATIVA</a>
+    </li>
+    <form class="form-inline my-1 my-lg-0" action="" method="">
+        <input class="form-control mr-sm-1" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+    </form>
+</ul>

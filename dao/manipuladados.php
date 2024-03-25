@@ -9,7 +9,7 @@
         public function setTable($t){
             $this->table = $t;
         }
-
+ 
         public function getFields(){
             return $this->fields;
         }
