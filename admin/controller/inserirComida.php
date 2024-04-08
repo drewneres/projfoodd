@@ -1,52 +1,26 @@
 <?php
 
-class Comida{
-    private $id;
-    private $nome;
-    private $ingredientes;
-    private $preco;
-    private $id_restaurante;
-    private $nome_restaurante;
-
-public function getId(){
-    return $this->id;
-}
-public function getNome(){
-    return $this->nome;
-}
-public function getIngredientes(){
-    return $this->ingredientes;
+include_once("../../dao/manipuladados.php");
+include_once("../../model/comida.php");
+function converte($String) {
+    return iconv("UTF-8","ISO8859-1", $String);
 }
 
-public function getPreco(){
-    return $this->preco;        
-}
+$comida = new Comida();
+$inserir = new ManipulaDados();
 
-public function getIdRestaurante(){
-    return $this->id_restaurante;
-}
-public function getNomeRestaurante(){
-    return $this->nome_restaurante;
-}
+$comida->setNome($_POST['txtPrato']);
+$comida->setIngredientes($_POST['txtIng']);
+$comida-> setPreco($_POST['txtPreco']);
+$comida->setNomeRestaurante($_POST['cbxRest']);
+$id_restaurante = $inserir->getIdByName($comida->getNomeRestaurante());
 
-public function setId ($id){
-    $this->id = $id;
-}
-public function setNome ($nome){
-    $this->nome = $nome;
-}
-public function setIngredientes ($ingredientes){
-    $this->ingredientes = $ingredientes;
-}
-public function setPreco ($preco){
-    $this->preco = $preco;
-}
-public function setIdRestaurante ($idRest){
-    $this->id_restaurante = $idRest;
-}
-public function setNomeRestaurante ($nomeRest){
-    $this->nome_restaurante = $nomeRest;
-}
-}
+
+$inserir->setTable("tb_comida");
+$inserir->setFields("nome,ingredientes,preco");
+$inserir->setDados("'{$comida->getNome()}', '{$comida->getIngredientes()}', '{$comida->getPreco()}','{$comida->getNomeRestaurante()}'");
+$inserir->insert();
+
+echo "<script> alert ('Comida cadastrada com sucesso') </script>";
+echo "<script>location='../../admin/principal.php?secao=cadcomida'</script>";
 ?>
-

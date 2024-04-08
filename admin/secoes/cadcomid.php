@@ -1,3 +1,11 @@
+<?php
+include_once("../dao/manipuladados.php");
+
+    $dados = new ManipulaDados();
+    $dados->setTable("tb_restaurante");
+    $lista = $dados->getAllDataTable();
+?>
+
 <form method="post" action="controller/inserirComida.php" enctype="multipart/form-data">
     <p>
         <label>Nome: </label>
@@ -14,8 +22,13 @@
     <p>
         <label>Restaurante: </label>
         <select name="cbxRest">
-        <option value=""></option>
+        <?php
+            foreach ($lista as $restaurante){
+        ?>
+        <option value="<?php echo $restaurante['nome'];?>"><?php echo $restaurante['nome'];?></option>
+        <?php } ?>
         </select>
+        
     </p>
     <p>
         <input type="submit" value="Enviar">
