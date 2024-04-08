@@ -35,22 +35,30 @@
             $this->valuePK = $VK;
         }
 
+        public function getIdByName($nome)
+    {
+        $this->sql = "SELECT * FROM $this->table WHERE nome='$nome'";
+        $this->qr = self::execSQL($this->sql);
 
+        $row = self::listQr($this->qr);
+          
+        return $row['id'];
+    }
+    public function getAllDataTable()
+    {
+        $this->sql = "SELECT * FROM $this->table";
+        $this->qr = self::execSQL($this->sql);
 
-        public function getAllDataTable(){
-            $this->sql = "select * from $this->table";
-            $this->qr = self::execSQL($this->sql);
+        $dados = array();
 
-            $row = self::listQr($this->qr);
-
-            return $row['id'];
-
+        while ($row = self::listQr($this->qr)) {
+            array_push($dados, $row);
         }
+        return $dados;
+    }
 
-        public function getIdByName($nome){
-            $this->sql = "SELECT * FROM $this->table WHERE nome='$nome'";
-            $this->qr = self::execSQL($this->sql);
-        }
+
+  
         public function validarLogin($login, $password){
             $this->sql = "SELECT * FROM $this->table WHERE nome ='$login'  and senha = '$password'";
             $this->qr = self::execSQL($this->sql);
