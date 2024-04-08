@@ -35,14 +35,14 @@
             $this->valuePK = $VK;
         }
 
-        public function getIdByName($nome)
+        public function getNameById($id)
     {
-        $this->sql = "SELECT * FROM $this->table WHERE nome='$nome'";
+        $this->sql = "SELECT * FROM $this->table WHERE id='$id'";
         $this->qr = self::execSQL($this->sql);
 
         $row = self::listQr($this->qr);
           
-        return $row['id'];
+        return $row['nome'];
     }
     public function getAllDataTable()
     {

@@ -25,7 +25,7 @@ include_once("../dao/manipuladados.php");
         <?php
             foreach ($lista as $restaurante){
         ?>
-        <option value="<?php echo $restaurante['nome'];?>"><?php echo $restaurante['nome'];?></option>
+        <option value="<?= $restaurante["id"] ?>">  <?= $restaurante["nome"] ?>   </option>
         <?php } ?>
         </select>
         
