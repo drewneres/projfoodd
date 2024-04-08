@@ -6,7 +6,7 @@ include_once("../dao/manipuladados.php");
     $lista = $dados->getAllDataTable();
 ?>
 <section>
-          <table border="1">
+          <table border="4">
             <tr>
               <th>ID</th>
               <th>NOME</th>
