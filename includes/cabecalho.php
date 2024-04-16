@@ -1,7 +1,7 @@
 <header>
 <ul class="navbar navbar-dark bg-dark nav-pills d-flex justify-content-around">
     <li class="nav-item">
-        <img src="img/site/drewzin.png">
+        <img src="../admin/site/logo.png">
     </li>
     <li class="nav-item">
         <a class="nav-link text-white" href="?secao=home">HOME</a>
@@ -23,4 +23,6 @@
     </form>
 </ul>
 </header>
+
+
 
